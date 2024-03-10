@@ -1,3 +1,12 @@
 baseURL = 'https://jadarma.github.io/blog'
 languageCode = 'en-us'
 title = "Jadarma's Blog"
+
+[markup.highlight]
+codeFences = true
+guessSyntax = false
+lineNoStart = 1
+lineNos = true
+lineNumbersInTable = false
+noClasses = false
+tabWidth = 4
