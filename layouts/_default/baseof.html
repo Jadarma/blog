@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.jade.min.css" integrity="sha512-XnxpWkDzGG+Jol4utJspX3P/IR/hdXnhW9mRJWe/y/32/vDfmNrFP7tWva8HFaXv1szGpYIlkMTTr3glBwTzFw==" crossorigin="anonymous">
+    <link rel="stylesheet" href = "{{ .Site.BaseURL }}/css/fonts.css">
+    <title>
+        {{ block "title" . }}
+        {{ .Site.Title }}
+        {{ end }}
+    </title>
+</head>
+<body>
+<main class="container">
+    <h1>{{ .Site.Title }}</h1>
+    {{ block "main" . }}
+    {{ end }}
+</main>
+</body>
+</html>
