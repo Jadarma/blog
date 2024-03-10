@@ -82,7 +82,7 @@
 }
 
 /* LineNumbersTable */
-.chroma .ln, .lnt {
+.chroma .ln, .chroma .lnt {
     white-space: pre;
     -webkit-user-select: none;
     user-select: none;
@@ -102,12 +102,12 @@
 }
 
 /* Comment (Normal, Hashbang, Multiline, Single, Special, Preproc, PreprocFile) */
-.chroma .c, .ch, .cm, .c1, .cs {
+.chroma .c, .chroma .ch, .chroma .cm, .chroma .c1, .chroma .cs {
     color: var(--color-fg-muted);
     font-style: italic;
 }
 
-.chroma .cs, .cp, .cpf {
+.chroma .cs, .chroma .cp, .chroma .cpf {
     font-weight: 700;
 }
 
@@ -118,16 +118,16 @@
 }
 
 /* Keyword (Normal, Declaration, Namespace, Reserved, Type, Constant, Pseudo) */
-.chroma .k, .kd, .kn, .kr, .kt, .kc, .kp {
+.chroma .k, .chroma .kd, .chroma .kn, .chroma .kr, .chroma .kt, .chroma .kc, .chroma .kp {
     color: var(--color-purple);
     font-style: italic;
 }
-.chroma .kc, .kp {
+.chroma .kc, .chroma .kp {
     font-weight: bold;
 }
 
 /* Operators (Normal, Word) */
-.chroma .o, .ow {
+.chroma .o, .chroma .ow {
     color: var(--color-cyan);
     font-weight: bold;
 }
@@ -138,22 +138,22 @@
 }
 
 /* String Literals (Normal, Backtick, Char, Single, Double, Affix, Delimiter, Documentation, HereDoc) */
-.chroma .s, .sb, .sc, .s1, .s2, .sa, .dl, .sd, .sh {
+.chroma .s, .chroma .sb, .chroma .sc, .chroma .s1, .chroma .s2, .chroma .sa, .chroma .dl, .chroma .sd, .chroma .sh {
     color: var(--color-green);
 }
 
 /* String Content (Escapes, Interpolation, Regex, Symbol, Other) */
-.chroma .se, .si, .sr, .ss, .sx {
+.chroma .se, .chroma .si, .chroma .sr, .chroma .ss, .chroma .sx {
     color: var(--color-cyan);
 }
 
 /* Numbers (Normal, Binary, Float, Hex, Integer, IntegerLong, Octal) */
-.chroma .m, .mb, .mf, .mh, .mi, .il, .mo {
+.chroma .m, .chroma .mb, .chroma .mf, .chroma .mh, .chroma .mi, .chroma .il, .chroma .mo {
     color: var(--color-orange);
 }
 
 /* Literal (Normal, Date) */
-.chroma .l, .ld {
+.chroma .l, .chroma .ld {
     color: var(--color-orange);
 }
 
@@ -166,10 +166,11 @@
 .chroma .n {}
 .chroma .x {}
 .chroma .nx {}
-.chroma .nb, .bp {}
+.chroma .nb {}
+.chroma .bp {}
 
 /* Functions (Normal, Magic) */
-.chroma .nf, .fm {
+.chroma .nf, .chroma .fm {
     color: var(--color-blue);
 }
 .chroma .fm {
@@ -182,7 +183,7 @@
 }
 
 /* Classes, Entity, Exceptions */
-.chroma .nc, .ne, .ne {
+.chroma .nc, .chroma .ne, .chroma .ne {
     color: var(--color-yellow);
 }
 
@@ -198,7 +199,7 @@
 }
 
 /* Variables (Normal, Class, Global, Instance, Magic) */
-.chroma .nv, .vc, .vg, .vi, .vm {
+.chroma .nv, .chroma .vc, .chroma .vg, .chroma .vi, .chroma .vm {
     color: var(--color-orange);
 }
 
@@ -248,12 +249,12 @@
 }
 
 /* Generic Prompt, Output */
-.chroma .gp, .go {
+.chroma .gp, .chroma .go {
     color: var(--color-fg-dark);
 }
 
 /* Generic Error, Traceback */
-.chroma .gr, .gt {
+.chroma .gr, .chroma .gt {
     color: var(--color-error);
 }
 
