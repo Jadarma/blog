@@ -1,4 +1,30 @@
+/* FOOTER -----------------------------------------------------------------------------------------------------------*/
+/* Disable spacing for horizontal rule right before footer. */
+hr:has(+footer) {
+    margin-bottom: 0;
+}
 
+/* Customize social links. */
+.socials {
+    margin: auto 0;
+    font-size: 1.5rem;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+.socials > a {
+    text-decoration: none;
+}
+
+/* Make icons bounce while hovered. Pick me! */
+.socials > a > i:hover {
+    -webkit-animation: fa-bounce 1s infinite linear;
+    -moz-animation: fa-bounce 1s infinite linear;
+    -o-animation: fa-bounce 1s infinite linear;
+    animation: fa-bounce 1s infinite linear;
+}
+
+/* CONTENT ----------------------------------------------------------------------------------------------------------*/
 /* Hide / Reveal the Heading Anchors */
 .hanchor {
     color: var(--color-fg-muted);
