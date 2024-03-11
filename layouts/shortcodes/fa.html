@@ -1,0 +1,5 @@
+<!-- Accepts a vararg of font awesome classes (without the "fa-" prefix) and returns an icon. -->
+{{ if not (.Get 0) }}
+    {{ errorf "No parameters provided for %q. See %s" .Name .Position }}
+{{ end }}
+<i class="{{ range .Params }}fa-{{.}} {{end}}"></i>
