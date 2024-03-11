@@ -1,0 +1,12 @@
+
+/* Hide / Reveal the Heading Anchors */
+.hanchor {
+    color: var(--color-fg-muted);
+    visibility: hidden;
+    text-decoration: none;
+}
+
+*:hover > .hanchor {
+    color: var(--color-green);
+    visibility: visible;
+}
