@@ -1,33 +1,59 @@
-:root {
-    /**
-     * Base16 - Material Theme Colors
-     * Based on palette from https://github.com/ntpeters/base16-materialtheme-scheme
-     */
-    --base00: #263238;
-    --base01: #2E3C43;
-    --base02: #314549;
-    --base03: #546E7A;
-    --base04: #B2CCD6;
-    --base05: #EEFFFF;
-    --base06: #EEFFFF;
-    --base07: #FFFFFF;
-    --base08: #F07178;
-    --base09: #F78C6C;
-    --base0A: #FFCB6B;
-    --base0B: #C3E88D;
-    --base0C: #89DDFF;
-    --base0D: #82AAFF;
-    --base0E: #C792EA;
-    --base0F: #FF5370;
+/* MATERIAL THEME ---------------------------------------------------------------------------------------------------*/
+/* Base16-style theme color styling.                                                                                 */
+/* Based on (and slightly modified) palette from https://github.com/ntpeters/base16-materialtheme-scheme.            */
+/* ------------------------------------------------------------------------------------------------------------------*/
+@media (prefers-color-scheme: dark) {
+    :root {
+        --base00: #263238;
+        --base01: #2E3C43;
+        --base02: #314549;
+        --base03: #546E7A;
+        --base04: #B2CCD6;
+        --base05: #EEFFFF;
+        --base06: #EEFFFF;
+        --base07: #FFFFFF;
+        --base08: #F07178;
+        --base09: #F78C6C;
+        --base0A: #FFCB6B;
+        --base0B: #C3E88D;
+        --base0C: #89DDFF;
+        --base0D: #82AAFF;
+        --base0E: #C792EA;
+        --base0F: #FF5370;
+    }
+}
 
-    /* Human readable aliases. */
+@media (prefers-color-scheme: light) {
+    :root {
+        --base00: #FAFAFA;
+        --base01: #E7EAEC;
+        --base02: #CCEAE7;
+        --base03: #9ca4b5;
+        --base04: #8796B0;
+        --base05: #485254;
+        --base06: #727c7e;
+        --base07: #FFFFFF;
+        --base08: #FF5370;
+        --base09: #F76D47;
+        --base0A: #FFB62C;
+        --base0B: #91B859;
+        --base0C: #39ADB5;
+        --base0D: #6182B8;
+        --base0E: #7C4DFF;
+        --base0F: #E53935;
+    }
+}
+
+/* Human readable aliases for Base16 variables. */
+:root {
     --color-bg: var(--base00);
     --color-bg-lighter: var(--base01);
     --color-bg-selection: var(--base02);
     --color-fg-muted: var(--base03);
     --color-fg-dark: var(--base04);
     --color-fg: var(--base05);
-    --color-fg-light: var(--base07);
+    --color-fg-light: var(--base06);
+    --color-bg-light: var(--base07);
     --color-red: var(--base08);
     --color-orange: var(--base09);
     --color-yellow: var(--base0A);
@@ -36,247 +62,4 @@
     --color-blue: var(--base0D);
     --color-purple: var(--base0E);
     --color-error: var(--base0F);
-}
-
-/* Adjust PICO colors. */
-:root {
-    --pico-code-color: var(--color-fg) !important;
-    --pico-code-backgroud-color: var(--color-bg) !important;
-}
-
-/* SYNTAX HIGHLIGHTING ------------------------------------------------------------- */
-
-/* Background */
-.bg {
-    color: var(--color-fg);
-    background-color: var(--color-bg);
-}
-
-.chroma {
-    color: var(--color-fg);
-    background-color: var(--color-bg);
-}
-
-/* Layouts */
-/* LineLink */
-.chroma .lnlinks {
-    outline: none;
-    text-decoration: none;
-    color: inherit;
-}
-
-/* LineTableTD */
-.chroma .lntd {
-    vertical-align: top;
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
-
-/* LineTable */
-.chroma .lntable {
-    border-spacing: 0;
-    padding: 0;
-    margin: 0;
-    border: 0;
-}
-
-/* LineNumbersTable */
-.chroma .ln, .chroma .lnt {
-    white-space: pre;
-    -webkit-user-select: none;
-    user-select: none;
-    margin-right: 0.4em;
-    padding: 0 0.4em 0 0.4em;
-    color: var(--color-fg-muted);
-}
-
-/* Lines */
-.chroma .line {
-    display: flex;
-}
-.chroma .cl {}
-.chroma .hl {
-    color: var(--color-fg-light);
-    background-color: var(--color-bg-selection);
-}
-
-/* Comment (Normal, Hashbang, Multiline, Single, Special, Preproc, PreprocFile) */
-.chroma .c, .chroma .ch, .chroma .cm, .chroma .c1, .chroma .cs {
-    color: var(--color-fg-muted);
-    font-style: italic;
-}
-
-.chroma .cs, .chroma .cp, .chroma .cpf {
-    font-weight: 700;
-}
-
-/* Comment Preproc (only really relevant for C) */
-.chroma .cp {
-    color: var(--color-purple);
-    font-weight: bold;
-}
-
-/* Keyword (Normal, Declaration, Namespace, Reserved, Type, Constant, Pseudo) */
-.chroma .k, .chroma .kd, .chroma .kn, .chroma .kr, .chroma .kt, .chroma .kc, .chroma .kp {
-    color: var(--color-purple);
-    font-style: italic;
-}
-.chroma .kc, .chroma .kp {
-    font-weight: bold;
-}
-
-/* Operators (Normal, Word) */
-.chroma .o, .chroma .ow {
-    color: var(--color-cyan);
-    font-weight: bold;
-}
-
-/* Punctuation */
-.chroma .p {
-    color: var(--color-cyan);
-}
-
-/* String Literals (Normal, Backtick, Char, Single, Double, Affix, Delimiter, Documentation, HereDoc) */
-.chroma .s, .chroma .sb, .chroma .sc, .chroma .s1, .chroma .s2, .chroma .sa, .chroma .dl, .chroma .sd, .chroma .sh {
-    color: var(--color-green);
-}
-
-/* String Content (Escapes, Interpolation, Regex, Symbol, Other) */
-.chroma .se, .chroma .si, .chroma .sr, .chroma .ss, .chroma .sx {
-    color: var(--color-cyan);
-}
-
-/* Numbers (Normal, Binary, Float, Hex, Integer, IntegerLong, Octal) */
-.chroma .m, .chroma .mb, .chroma .mf, .chroma .mh, .chroma .mi, .chroma .il, .chroma .mo {
-    color: var(--color-orange);
-}
-
-/* Literal (Normal, Date) */
-.chroma .l, .chroma .ld {
-    color: var(--color-orange);
-}
-
-/* Whitespace */
-.chroma .w {
-    color: var(--color-fg-muted);
-}
-
-/* Names */
-.chroma .n {}
-.chroma .x {}
-.chroma .nx {}
-.chroma .nb {}
-.chroma .bp {}
-
-/* Functions (Normal, Magic) */
-.chroma .nf, .chroma .fm {
-    color: var(--color-blue);
-}
-.chroma .fm {
-    font-style: italic;
-}
-
-/* Decorators */
-.chroma .nd {
-    color: var(--color-purple);
-}
-
-/* Classes, Entity, Exceptions */
-.chroma .nc, .chroma .ne, .chroma .ne {
-    color: var(--color-yellow);
-}
-
-/* Tags */
-.chroma .nt {
-    color: var(--color-red);
-}
-
-/* Properties */
-.chroma .py {
-    color: var(--color-fg-light);
-    font-weight: bold;
-}
-
-/* Variables (Normal, Class, Global, Instance, Magic) */
-.chroma .nv, .chroma .vc, .chroma .vg, .chroma .vi, .chroma .vm {
-    color: var(--color-orange);
-}
-
-/* Constants */
-.chroma .no {
-    color: var(--color-blue);
-    font-weight: bold;
-}
-
-/* Labels */
-.chroma .nl {
-    color: var(--color-blue);
-    font-weight: bold;
-}
-
-/* Attributes */
-.chroma .na {
-    color: var(--color-yellow);
-}
-
-/* Namespaces */
-.chroma .nn{}
-
-/* Error */
-.chroma .err {
-    color: var(--color-bg);
-    background-color: var(--color-error);
-    font-weight: bold;
-}
-
-/* Generics */
-.chroma .g {}
-
-/* Generic Emphasis */
-.chroma .ge {
-    font-style: italic;
-}
-
-/* Generic Strong */
-.chroma .gs {
-    font-weight: bold;
-}
-
-/* GenericUnderline */
-.chroma .gl {
-    text-decoration: underline;
-}
-
-/* Generic Prompt, Output */
-.chroma .gp, .chroma .go {
-    color: var(--color-fg-dark);
-}
-
-/* Generic Error, Traceback */
-.chroma .gr, .chroma .gt {
-    color: var(--color-error);
-}
-
-/* Deleted (e.g.: Diffs) */
-.chroma .gd {
-    color: var(--color-red);
-    background-color: var(--color-bg-selection);
-}
-
-/* Inserted (e.g.: Diffs) */
-.chroma .gi {
-    color: var(--color-green);
-    background-color: var(--color-bg-selection);
-}
-
-/* Generic Heading */
-.chroma .gh {
-    color: var(--color-blue);
-    font-weight: bold;
-}
-
-/* Generic Subheading */
-.chroma .gu {
-    color: var(--color-blue);
 }
