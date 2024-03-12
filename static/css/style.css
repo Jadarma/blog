@@ -1,27 +1,53 @@
+html, body {
+    min-width: 320px;
+}
+
 /* FOOTER -----------------------------------------------------------------------------------------------------------*/
 /* Disable spacing for horizontal rule right before footer. */
 hr:has(+footer) {
     margin-bottom: 0;
 }
 
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Customize copyright text. */
+footer > div.copyright {
+    line-height: 1.1em;
+}
+
 /* Customize social links. */
-.socials {
+footer > div.socials {
+    align-content: flex-start;
     margin: auto 0;
     font-size: 1.5rem;
-    -webkit-user-select: none;
-    -moz-user-select: none;
     user-select: none;
 }
-.socials > a {
+
+footer > div.socials a {
     text-decoration: none;
 }
 
 /* Make icons bounce while hovered. Pick me! */
-.socials > a > i:hover {
-    -webkit-animation: fa-bounce 1s infinite linear;
-    -moz-animation: fa-bounce 1s infinite linear;
-    -o-animation: fa-bounce 1s infinite linear;
+footer > .socials a > i:hover {
     animation: fa-bounce 1s infinite linear;
+}
+
+/** Change to a vertical layout for small screens. */
+@media screen and (max-width: 575px) {
+    footer {
+        align-items: center;
+        flex-direction: column-reverse;
+        gap: 1em;
+    }
+
+    footer > div.copyright {
+        text-align: center;
+    }
 }
 
 /* CONTENT ----------------------------------------------------------------------------------------------------------*/
