@@ -19,8 +19,8 @@
     </title>
 </head>
 <body>
+{{ partial "header.html" . }}
 <main class="container">
-    <h1>{{ .Site.Title }}</h1>
     {{ block "main" . }}
     {{ end }}
 </main>

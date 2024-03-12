@@ -1,5 +1,122 @@
+/* HEADER -----------------------------------------------------------------------------------------------------------*/
+/* Set minimum viewport size. */
 html, body {
     min-width: 320px;
+}
+
+/* HEADER -----------------------------------------------------------------------------------------------------------*/
+/* Disable spacing for horizontal rule right after header. */
+header + hr {
+    margin-top: 0;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+header > div.title {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+header > div.title img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+header > nav {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    font-weight: bold;
+    align-items: center;
+}
+
+header > nav a {
+    flex-grow: 1;
+    border-radius: 4pt;
+    padding: 4px 16px;
+    text-align: center;
+    text-decoration: none;
+    height: fit-content;
+}
+
+/** Navigation items will respond to mouse overs. */
+header > nav > a:hover i {
+    animation: fa-beat 0.5s normal linear;
+}
+
+/** Pretty pretty colors! But a lot of boilerplate... */
+/* @formatter:off */
+header > nav > a:nth-child(1)       { color: var(--color-red   ); background-color: var(--color-bg    ); }
+header > nav > a:nth-child(1):hover { color: var(--color-bg    ); background-color: var(--color-red   ); }
+header > nav > a:nth-child(2)       { color: var(--color-green ); background-color: var(--color-bg    ); }
+header > nav > a:nth-child(2):hover { color: var(--color-bg    ); background-color: var(--color-green ); }
+header > nav > a:nth-child(3)       { color: var(--color-yellow); background-color: var(--color-bg    ); }
+header > nav > a:nth-child(3):hover { color: var(--color-bg    ); background-color: var(--color-yellow); }
+header > nav > a:nth-child(4)       { color: var(--color-blue  ); background-color: var(--color-bg    ); }
+header > nav > a:nth-child(4):hover { color: var(--color-bg    ); background-color: var(--color-blue  ); }
+header > nav > a:nth-child(5)       { color: var(--color-purple); background-color: var(--color-bg    ); }
+header > nav > a:nth-child(5):hover { color: var(--color-bg    ); background-color: var(--color-purple); }
+@media screen and (prefers-color-scheme: light) { header > nav > a { box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); }  }
+/* @formatter:on */
+
+/** Small screens should hide text and show title. */
+@media screen and (max-width: 767px) {
+    header > div.title {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    header > nav a > span {
+        display: none;
+    }
+
+    header > nav {
+        width: 288px;
+    }
+}
+
+/** Small and medium screens should stack the title and navigator vertically. */
+@media screen and (max-width: 1023px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Medium-tablet sized screens should add a newline after the icon to ensure enough room for text. */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header > nav > a > span:before {
+        content: '\A';
+    }
+
+    header > nav > a > span {
+        white-space: pre-wrap
+    }
+}
+
+/* Medium sized screens should cover the whole length evenly with the nav bar. */
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    header > nav {
+        width: 100%;
+    }
+
+    header > nav > a {
+        width: calc((100% - 4em) / 5);
+    }
 }
 
 /* FOOTER -----------------------------------------------------------------------------------------------------------*/
