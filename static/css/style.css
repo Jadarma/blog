@@ -1,7 +1,14 @@
-/* HEADER -----------------------------------------------------------------------------------------------------------*/
-/* Set minimum viewport size. */
-html, body {
+/* PAGE -------------------------------------------------------------------------------------------------------------*/
+/* Set minimum viewport size and ensure an empty-ish page covers at least the device viewport. */
+body {
     min-width: 320px;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
 }
 
 /* HEADER -----------------------------------------------------------------------------------------------------------*/
