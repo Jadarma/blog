@@ -63,16 +63,16 @@ header > nav > a:hover i {
 
 /** Pretty pretty colors! But a lot of boilerplate... */
 /* @formatter:off */
-header > nav > a:nth-child(1)       { color: var(--color-red   ); background-color: var(--color-bg    ); }
-header > nav > a:nth-child(1):hover { color: var(--color-bg    ); background-color: var(--color-red   ); }
-header > nav > a:nth-child(2)       { color: var(--color-green ); background-color: var(--color-bg    ); }
-header > nav > a:nth-child(2):hover { color: var(--color-bg    ); background-color: var(--color-green ); }
-header > nav > a:nth-child(3)       { color: var(--color-yellow); background-color: var(--color-bg    ); }
-header > nav > a:nth-child(3):hover { color: var(--color-bg    ); background-color: var(--color-yellow); }
-header > nav > a:nth-child(4)       { color: var(--color-blue  ); background-color: var(--color-bg    ); }
-header > nav > a:nth-child(4):hover { color: var(--color-bg    ); background-color: var(--color-blue  ); }
-header > nav > a:nth-child(5)       { color: var(--color-purple); background-color: var(--color-bg    ); }
-header > nav > a:nth-child(5):hover { color: var(--color-bg    ); background-color: var(--color-purple); }
+header > nav > a:nth-child(1)       { color: var(--color-red                 ); background-color: var(--pico-card-background-color); }
+header > nav > a:nth-child(1):hover { color: var(--pico-card-background-color); background-color: var(--color-red                 ); }
+header > nav > a:nth-child(2)       { color: var(--color-green               ); background-color: var(--pico-card-background-color); }
+header > nav > a:nth-child(2):hover { color: var(--pico-card-background-color); background-color: var(--color-green               ); }
+header > nav > a:nth-child(3)       { color: var(--color-yellow              ); background-color: var(--pico-card-background-color); }
+header > nav > a:nth-child(3):hover { color: var(--pico-card-background-color); background-color: var(--color-yellow              ); }
+header > nav > a:nth-child(4)       { color: var(--color-blue                ); background-color: var(--pico-card-background-color); }
+header > nav > a:nth-child(4):hover { color: var(--pico-card-background-color); background-color: var(--color-blue                ); }
+header > nav > a:nth-child(5)       { color: var(--color-purple              ); background-color: var(--pico-card-background-color); }
+header > nav > a:nth-child(5):hover { color: var(--pico-card-background-color); background-color: var(--color-purple              ); }
 @media screen and (prefers-color-scheme: light) { header > nav > a { box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); }  }
 /* @formatter:on */
 
