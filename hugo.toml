@@ -2,11 +2,19 @@ baseURL = 'https://jadarma.github.io/blog'
 languageCode = 'en-us'
 title = "Jadarma's Blog"
 
+[permalinks.page]
+    posts = '/posts/:year/:month/:slug'
+
+[taxonomies]
+category = 'categories'
+tag = 'tags'
+series = 'series'
+
 [markup.highlight]
 codeFences = true
 guessSyntax = false
 lineNoStart = 1
-lineNos = true
+lineNos = false
 lineNumbersInTable = false
 noClasses = false
 tabWidth = 4
