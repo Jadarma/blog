@@ -13,6 +13,15 @@ main {
     flex-direction: column;
 }
 
+/** Limit the width of articles for easier readability. */
+@media screen and (min-width: 1280px) {
+    article.single {
+        width: 100%;
+        max-width: 50rem;
+        align-self: center;
+    }
+}
+
 /* HEADER -----------------------------------------------------------------------------------------------------------*/
 /* Disable spacing for horizontal rule right after header. */
 header + hr {
