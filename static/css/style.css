@@ -42,6 +42,12 @@ header > div.title {
     gap: 1em;
 }
 
+header > div.title a {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 header > div.title img {
     width: 64px;
     height: 64px;

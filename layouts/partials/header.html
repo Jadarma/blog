@@ -2,26 +2,26 @@
     <div class="title">
         <img src="{{ .Site.BaseURL }}/img/jadarma_avatar.png"
              alt="Author's Profile Picture Avatar">
-        <strong style="font-size:2rem">{{ .Site.Title }}</strong>
+        <a class="contrast" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
     </div>
     <nav>
-        <a href="{{ .Site.BaseURL }}">
-            <i class="fa-solid fa-house"></i>
-            <span>Home</span>
+        <a href="{{ .Site.BaseURL }}/posts">
+            <i class="fa-solid fa-newspaper"></i>
+            <span>Posts</span>
         </a>
-        <a href="#">
+        <a href="{{ .Site.BaseURL }}/series">
             <i class="fa-solid fa-layer-group"></i>
             <span>Series</span>
         </a>
-        <a href="#">
+        <a href="{{ .Site.BaseURL }}/categories">
             <i class="fa-solid fa-cubes"></i>
             <span>Categories</span>
         </a>
-        <a href="#">
+        <a href="{{ .Site.BaseURL }}/tags">
             <i class="fa-solid fa-tags"></i>
             <span>Tags</span>
         </a>
-        <a href="#">
+        <a href="{{ .Site.BaseURL }}/about">
             <i class="fa-solid fa-circle-info"></i>
             <span>About</span>
         </a>
