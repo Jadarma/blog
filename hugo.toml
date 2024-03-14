@@ -12,10 +12,10 @@ disableKinds = [ 'taxonomy' ]
     [permalinks.term]
         series = '/series/:slug'
         tags = '/filter/tag/:slug'
-        categories = '/filter/category/:slug'
+        category = '/filter/category/:slug'
 
 [taxonomies]
-category = 'categories'
+category = 'category'
 tag = 'tags'
 series = 'series'
 
