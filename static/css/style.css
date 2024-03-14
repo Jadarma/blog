@@ -208,3 +208,39 @@ div.error404 > h1 {
     color: var(--color-green);
     visibility: visible;
 }
+
+/* POSTS PAGE -------------------------------------------------------------------------------------------------------*/
+h2.posts-year {
+    margin-bottom: 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--pico-muted-border-color);
+}
+
+article.minimal {
+    background-color: transparent;
+    box-shadow: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    align-items: center;
+}
+
+article.minimal > a.post-link {
+    flex-grow: 1;
+}
+
+article.minimal > span.post-date {
+    min-width: fit-content;
+    max-width: fit-content;
+}
+
+article.minimal > a:not(:hover) {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+    article.minimal {
+        flex-direction: column;
+        align-items: revert;
+    }
+}
