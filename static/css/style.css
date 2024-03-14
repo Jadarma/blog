@@ -209,6 +209,20 @@ div.error404 > h1 {
     visibility: visible;
 }
 
+/* PARTIALS ---------------------------------------------------------------------------------------------------------*/
+article.preview span.detail {
+    font-size: 0.75rem;
+    color: var(--pico-muted-color);
+}
+
+article.preview span.detail > i {
+    margin: 0 0.25rem;
+}
+
+article.preview a {
+    text-decoration: none;
+}
+
 /* POSTS PAGE -------------------------------------------------------------------------------------------------------*/
 h2.posts-year {
     margin-bottom: 0;

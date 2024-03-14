@@ -1,0 +1,42 @@
+<article class="preview">
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <p class="summary">
+        {{ .Summary }}
+        {{ if .Truncated }}
+            <a href="{{ .RelPermalink }}">Read more...</a>
+        {{ end }}
+    </p>
+
+    <span class="detail post-time">
+        <i class="fa-solid fa-calendar"></i>
+        {{ dateFormat (or .Site.Params.dateFormat "2006-01-02") .Date }}
+    </span>
+    <span class="detail word-count">
+        <i class="fa-solid fa-pen-nib"></i>
+        {{ .WordCount }} words
+    </span>
+    <span class="detail read-time">
+        <i class="fa-solid fa-hourglass-half"></i>
+        {{ .ReadingTime }}
+        min
+    </span>
+
+    {{ if isset .Params "category" }}
+        <span class="detail category">
+            <i class="fa-solid fa-cubes"></i>
+            <a class="secondary" href="{{ .Site.BaseURL }}filter/category/{{ .Params.category }}">
+                {{ .Params.category }}
+            </a>
+        </span>
+    {{ end }}
+
+    {{ if and (isset .Params "tags") (gt (.Params.tags | len) 0) }}
+        <span class="detail tags">
+            <i class="fa-solid fa-tags"></i>
+            {{ range .Params.tags | first 5 }}
+                <a class="secondary" href="{{ $.Site.BaseURL }}filter/tag/{{.}}">{{.}}</a>
+            {{ end }}
+            {{ if gt (.Params.tags | len) 5 }}…{{ end }}
+        </span>
+    {{ end }}
+</article>
