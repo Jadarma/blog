@@ -122,14 +122,6 @@ header > nav > a:nth-child(5):hover { color: var(--pico-card-background-color); 
         flex-direction: column;
         align-items: center;
     }
-
-    header > nav > a > span:before {
-        content: '\A';
-    }
-
-    header > nav > a > span {
-        white-space: pre-wrap
-    }
 }
 
 /* Medium sized screens should cover the whole length evenly with the nav bar. */
