@@ -2,8 +2,17 @@ baseURL = 'https://jadarma.github.io/blog'
 languageCode = 'en-us'
 title = "Jadarma's Blog"
 
-[permalinks.page]
-    posts = '/posts/:year/:month/:slug'
+# No need for a dedicated page for each taxonomy, they are inlined in the filters.
+disableKinds = [ 'taxonomy' ]
+
+# Adjust URL structure.
+[permalinks]
+    [permalinks.page]
+        posts = '/posts/:year/:month/:slug'
+    [permalinks.term]
+        series = '/series/:slug'
+        tags = '/filter/tag/:slug'
+        categories = '/filter/category/:slug'
 
 [taxonomies]
 category = 'categories'
