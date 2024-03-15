@@ -1,0 +1,36 @@
+<div id="results">
+    {{ with .context.Paginate .results }}
+        {{ range .Pages }}
+            {{ partial "article-preview" . }}
+        {{ end }}
+        {{ if gt .TotalPages 1 }}
+            <div class="pagination">
+                <a {{ if .HasPrev }}href="{{ .First.URL }}" {{ else }}disabled="true"{{ end }}
+                   role="button"
+                   aria-label="First Page"
+                ><i class="fa-solid fa-angles-left"></i>
+                </a>
+                <a {{ if .HasPrev }}href="{{ .Prev.URL }}" {{ else }}disabled="true"{{ end }}
+                   role="button"
+                   aria-label="Previous Page"
+                ><i class="fa-solid fa-angle-left"></i>
+                </a>
+
+                <span class="page-count">
+                    {{ .PageNumber }} / {{ .TotalPages }}
+                </span>
+
+                <a {{ if .HasNext }}href="{{ .Next.URL }}" {{ else }}disabled="true"{{ end }}
+                   role="button"
+                   aria-label="Next Page"
+                ><i class="fa-solid fa-angle-right"></i>
+                </a>
+                <a {{ if .HasNext }}href="{{ .Last.URL }}" {{ else }}disabled="true"{{ end }}
+                   role="button"
+                   aria-label="Next Page"
+                ><i class="fa-solid fa-angles-right"></i>
+                </a>
+            </div>
+        {{ end }}
+    {{ end }}
+</div>

@@ -88,7 +88,7 @@ header > nav > a:nth-child(4)       { color: var(--color-blue                ); 
 header > nav > a:nth-child(4):hover { color: var(--pico-card-background-color); background-color: var(--color-blue                ); }
 header > nav > a:nth-child(5)       { color: var(--color-purple              ); background-color: var(--pico-card-background-color); }
 header > nav > a:nth-child(5):hover { color: var(--pico-card-background-color); background-color: var(--color-purple              ); }
-@media screen and (prefers-color-scheme: light) { header > nav > a { box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); }  }
+@media screen and (prefers-color-scheme: light) { header > nav > a { box-shadow: var(--pico-box-shadow); }  }
 /* @formatter:on */
 
 /** Small screens should hide text and show title. */
@@ -196,19 +196,6 @@ div.error404 > h1 {
     color: var(--color-red);
 }
 
-/* CONTENT ----------------------------------------------------------------------------------------------------------*/
-/* Hide / Reveal the Heading Anchors */
-.hanchor {
-    color: var(--color-fg-muted);
-    visibility: hidden;
-    text-decoration: none;
-}
-
-*:hover > .hanchor {
-    color: var(--color-green);
-    visibility: visible;
-}
-
 /* PARTIALS ---------------------------------------------------------------------------------------------------------*/
 article.preview span.detail {
     font-size: 0.75rem;
@@ -221,6 +208,26 @@ article.preview span.detail > i {
 
 article.preview a {
     text-decoration: none;
+}
+
+/* PAGINATION -------------------------------------------------------------------------------------------------------*/
+div.pagination {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+div.pagination > span.page-count {
+    flex-grow: 1;
+    text-align: center;
+}
+
+div.pagination > a {
+    border-radius: 4pt;
+    width: 3rem;
+    height: 3rem;
 }
 
 /* POSTS PAGE -------------------------------------------------------------------------------------------------------*/
@@ -257,4 +264,68 @@ article.minimal > a:not(:hover) {
         flex-direction: column;
         align-items: revert;
     }
+}
+
+/* FILTER PAGE ------------------------------------------------------------------------------------------------------*/
+#filter {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+@media screen and (max-width: 1027px) {
+    #filter {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1028px) {
+    #filter > #results {
+        flex-grow: 1;
+    }
+
+    #filter > #taxonomies {
+        width: 420px;
+        min-width: 420px;
+    }
+}
+
+ul.taxonomy-list.taxonomy-tags {
+    list-style: none inside none;
+    padding-left: 0;
+}
+
+ul.taxonomy-list.taxonomy-tags > li {
+    display: inline-block;
+    padding: 4pt 8pt;
+    border-radius: 4pt;
+}
+
+ul.taxonomy-list.taxonomy-tags > li:hover {
+    outline: 1pt solid var(--pico-primary);
+}
+
+ul.taxonomy-list > li > a {
+    text-decoration: none;
+}
+
+/* CONTENT & ELEMENTS -----------------------------------------------------------------------------------------------*/
+/* Hide / Reveal the Heading Anchors */
+.hanchor {
+    color: var(--color-fg-muted);
+    visibility: hidden;
+    text-decoration: none;
+}
+
+*:hover > .hanchor {
+    color: var(--color-green);
+    visibility: visible;
+}
+
+.card {
+    background: var(--pico-card-background-color);
+    padding: var(--pico-spacing);
+    margin-bottom: var(--pico-spacing);
+    box-shadow: var(--pico-box-shadow);
 }

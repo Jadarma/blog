@@ -5,6 +5,9 @@ title = "Jadarma's Blog"
 # No need for a dedicated page for each taxonomy, they are inlined in the filters.
 disableKinds = [ 'taxonomy' ]
 
+# Set the number of posts per filter page.
+paginate = 10
+
 # Adjust URL structure.
 [permalinks]
     [permalinks.page]

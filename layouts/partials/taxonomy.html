@@ -1,0 +1,36 @@
+<div class="card">
+    <h3><i class="fa-solid fa-cubes"></i> Categories</h3>
+
+    <ul class="taxonomy-list taxonomy-categories">
+        {{ $selected := "" }}
+        {{ if and .IsNode (eq .Type "category") }}
+            {{ $selected = .Data.Term }}
+        {{ end }}
+        {{ range .Site.Taxonomies.category.Alphabetical }}
+            <li>
+                {{ $isSelected := eq $selected .Term }}
+                <a href="{{ .Page.Permalink }}"
+                   {{ if $isSelected }}aria-current="page" style="font-weight: bold"{{ end }}
+                >{{ .Term | strings.Title }} <sup>({{ .Count }})</sup></a>
+            </li>
+        {{ end }}
+    </ul>
+</div>
+
+<div class="card">
+    <h3><i class="fa-solid fa-tags"></i> Tags</h3>
+    <ul class="taxonomy-list taxonomy-tags">
+        {{ $selected := "" }}
+        {{ if and .IsNode (eq .Type "tags") }}
+            {{ $selected = .Data.Term }}
+        {{ end }}
+        {{ range .Site.Taxonomies.tags.Alphabetical }}
+            <li>
+                {{ $isSelected := eq $selected .Term }}
+                <a href="{{ .Page.Permalink }}"
+                   {{ if $isSelected }}aria-current="page" style="font-weight: bold"{{ end }}
+                >{{ .Term | strings.Title }} <sup>({{ .Count }})</sup></a>
+            </li>
+        {{ end }}
+    </ul>
+</div>
