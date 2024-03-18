@@ -311,6 +311,15 @@ ul.taxonomy-list > li > a {
 }
 
 /* CONTENT & ELEMENTS -----------------------------------------------------------------------------------------------*/
+#page-title {
+    align-self: center;
+}
+
+#page-subtitle {
+    align-self: center;
+    font-style: italic;
+}
+
 /* Hide / Reveal the Heading Anchors */
 .hanchor {
     color: var(--color-fg-muted);

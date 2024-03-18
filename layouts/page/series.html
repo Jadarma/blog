@@ -1,0 +1,10 @@
+{{ define "main" }}
+    <h1 id="page-title">Series</h1>
+    <p id="page-subtitle">So… like playlists?</p>
+
+    <hr>
+    {{ range .Site.Taxonomies.series.Alphabetical }}
+        {{ partial "series-preview" .Page }}
+    {{ end }}
+
+{{ end }}

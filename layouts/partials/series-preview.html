@@ -1,0 +1,16 @@
+<article class="preview">
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ with .Params.Subtitle}}
+        <em>{{ . }}</em>
+        <br>
+    {{ end }}
+
+    <span class="detail post-time">
+        <i class="fa-solid fa-calendar"></i>
+        {{ dateFormat (or .Site.Params.dateFormat "2006-01-02") .Date }}
+    </span>
+    <span class="detail post-count">
+        <i class="fa-solid fa-list-ol"></i>
+        {{ .Pages.Len }} Posts
+    </span>
+</article>
