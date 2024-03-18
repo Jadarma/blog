@@ -1,9 +1,11 @@
 {{ define "main" }}
-    {{ .Content }}
+    <main class="container thin">
+        {{ .Content }}
 
-    <h2>Latest Posts:</h2>
+        <h2>Latest Posts:</h2>
 
-    {{ range (where .Site.RegularPages "Type" "posts" | first 3 ) }}
-        {{ partial "article-preview" . }}
-    {{ end }}
+        {{ range (where .Site.RegularPages "Type" "posts" | first 3) }}
+            {{ partial "article-preview" . }}
+        {{ end }}
+    </main>
 {{ end }}

@@ -1,13 +1,15 @@
 {{ define "main" }}
-    <h1>Posts</h1>
+    <main class="container thin">
+        <h1>Posts</h1>
 
-    {{ range .Data.Pages.GroupByDate "2006" }}
-        <h2 class="posts-year">{{ .Key }}</h2>
-        {{ range .Pages }}
-            <article class="minimal">
-                <a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a>
-                <span class="post-date">{{ dateFormat (or .Site.Params.dateFormat "2006-01-02") .Date }}</span>
-            </article>
+        {{ range .Data.Pages.GroupByDate "2006" }}
+            <h2 class="posts-year">{{ .Key }}</h2>
+            {{ range .Pages }}
+                <article class="minimal">
+                    <a href="{{ .Permalink }}" class="post-link">{{ .Title }}</a>
+                    <span class="post-date">{{ dateFormat (or .Site.Params.dateFormat "2006-01-02") .Date }}</span>
+                </article>
+            {{ end }}
         {{ end }}
-    {{ end }}
+    </main>
 {{ end }}

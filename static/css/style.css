@@ -13,11 +13,11 @@ main {
     flex-direction: column;
 }
 
-/** Limit the width of articles for easier readability. */
+/** Limit the width of some pages for easier reading. */
 @media screen and (min-width: 1280px) {
-    article.single {
+    main.container.thin {
         width: 100%;
-        max-width: 50rem;
+        max-width: 48rem;
         align-self: center;
     }
 }

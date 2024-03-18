@@ -1,11 +1,13 @@
 {{ define "main" }}
-    <div id="filter">
-        <div id="results">
-            {{ $results := where .Site.RegularPages "Type" "posts" }}
-            {{ partial "filter-results" (dict "context" . "results" $results) }}
+    <main class="container">
+        <div id="filter">
+            <div id="results">
+                {{ $results := where .Site.RegularPages "Type" "posts" }}
+                {{ partial "filter-results" (dict "context" . "results" $results) }}
+            </div>
+            <div id="taxonomies">
+                {{ partial "taxonomy" . }}
+            </div>
         </div>
-        <div id="taxonomies">
-            {{ partial "taxonomy" . }}
-        </div>
-    </div>
+    </main>
 {{ end }}

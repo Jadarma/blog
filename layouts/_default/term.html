@@ -1,10 +1,12 @@
 {{ define "main" }}
-    <div id="filter">
-        <div id="results">
-            {{ partial "filter-results" (dict "context" . "results" .Data.Pages) }}
+    <main class="container">
+        <div id="filter">
+            <div id="results">
+                {{ partial "filter-results" (dict "context" . "results" .Data.Pages) }}
+            </div>
+            <div id="taxonomies">
+                {{ partial "taxonomy" . }}
+            </div>
         </div>
-        <div id="taxonomies">
-            {{ partial "taxonomy" . }}
-        </div>
-    </div>
+    </main>
 {{ end }}
