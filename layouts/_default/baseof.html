@@ -12,11 +12,7 @@
     <link rel="stylesheet" href = "{{ .Site.BaseURL }}/css/colors.css">
     <link rel="stylesheet" href = "{{ .Site.BaseURL }}/css/chromastyles.css">
     <link rel="stylesheet" href = "{{ .Site.BaseURL }}/css/style.css">
-    <title>
-        {{ block "title" . }}
-        {{ .Site.Title }}
-        {{ end }}
-    </title>
+    <title>{{ block "title" . }}{{ with .Title}}{{.}} | {{ end }}{{ .Site.Title }}{{ end }}</title>
 </head>
 <body>
 {{ partial "header.html" . }}
