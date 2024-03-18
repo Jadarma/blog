@@ -1,0 +1,45 @@
+{{ define "main" }}
+    <main class="container thin">
+        <article class="single">
+            <div class="meta">
+                <h1 id="page-title">{{ .Title }}</h1>
+                <span class="detail post-time">
+                    <i class="fa-solid fa-calendar"></i>
+                    {{ dateFormat (or .Site.Params.dateFormat "2006-01-02") .Date }}
+                </span>
+                <span class="detail word-count">
+                    <i class="fa-solid fa-pen-nib"></i>
+                    {{ .WordCount }} words
+                </span>
+                <span class="detail read-time">
+                    <i class="fa-solid fa-hourglass-half"></i>
+                    {{ .ReadingTime }} min
+                </span>
+            </div>
+            <hr>
+
+            {{ .Content }}
+
+            <div class="taxonomy">
+                <hr>
+                {{ range first 1 (.GetTerms "series") }}
+                    <i class="fa-solid fa-layer-group"></i>
+                    Series: Part Of <a class="contrast" href="{{ .RelPermalink }}">{{ .Title }}</a>
+                    <br>
+                {{ end }}
+                {{ range first 1 (.GetTerms "category") }}
+                    <i class="fa-solid fa-cubes"></i>
+                    Category: <a class="contrast" href="{{ .RelPermalink }}">{{ .Name }}</a>
+                    <br>
+                {{ end }}
+                {{ with .GetTerms "tags" }}
+                    <i class="fa-solid fa-tags"></i>
+                    Tags:
+                    {{ range . }}
+                        <a class="contrast" href="{{ .RelPermalink }}">{{ .Name }}</a>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </article>
+    </main>
+{{ end }}

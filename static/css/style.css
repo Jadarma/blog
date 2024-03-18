@@ -310,9 +310,34 @@ ul.taxonomy-list > li > a {
     text-decoration: none;
 }
 
+/* POSTS ------------------------------------------------------------------------------------------------------------*/
+article.single {
+    padding-top: 5rem;
+}
+article.single span.detail {
+    font-size: 0.75rem;
+    color: var(--pico-muted-color);
+}
+article.single div.meta {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+article.single span.detail > i {
+    margin: 0 0.25rem;
+}
+
+article.single div.taxonomy {
+    font-size: 0.75rem;
+    color: var(--pico-muted-color);
+}
+article.single div.taxonomy a {
+    text-decoration: none;
+}
 /* CONTENT & ELEMENTS -----------------------------------------------------------------------------------------------*/
 #page-title {
     align-self: center;
+    text-align: center;
 }
 
 #page-subtitle {
