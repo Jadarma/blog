@@ -29,7 +29,7 @@
                 {{ $isSelected := eq $selected .Term }}
                 <a href="{{ .Page.Permalink }}"
                    {{ if $isSelected }}aria-current="page" style="font-weight: bold"{{ end }}
-                >{{ .Term | strings.Title }} <sup>({{ .Count }})</sup></a>
+                >{{ .Name }} <sup>({{ .Count }})</sup></a>
             </li>
         {{ end }}
     </ul>
