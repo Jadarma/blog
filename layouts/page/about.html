@@ -1,5 +1,45 @@
 {{ define "main" }}
     <main class="container thin">
+        <img src="{{ .Site.BaseURL }}/img/jadarma_avatar.png"
+             alt="Author's Profile Picture Avatar"
+             style="width: 256px; margin: 0 auto; border-radius: 50%">
+
+        <hr>
         {{ .Content }}
+        <div style="flex-grow: 1"></div>
+        <hr>
+
+        <h6><i class="fa-solid fa-scale-balanced"></i> Boring Legal Stuff</h6>
+        <ul style="font-size: 0.6rem">
+            <li>
+                <strong>Licensing</strong>
+                This blog is licenced under <em>CC BY-SA 4.0</em> (see footer for copyright information).
+                A copy of the source material is made available on <a class="secondary" href="https://github.com/Jadarma/blog">GitHub</a>.
+                On top of the terms provided by the license, permission is hereby granted for reading and/or quoting for
+                the purpose of commentary in text, audio, or video form, provided you cite the source and link back to
+                the original article.
+            </li>
+            <li>
+                <strong>Opinions</strong>
+                All views expressed are either personal opinion, a devil's advocate position for the purpose of debating,
+                or satirical in nature.
+                In no circumstances should they be considered to reflect the opinion of any past, current, or future
+                employer, or anyone or anything else I might associate with.
+            </li>
+            <li>
+                <strong>Not Professional Advice</strong>
+                The information provided by this blog is for educational and/or entertainment purposes only, not
+                intended to constitute any advice of a professional nature.
+                The content should not be used as a substitute for professional advice.
+                You should always consult relevant professionals before making important personal or professional decisions.
+                Your reliance on the data provided is solely at your own risk.
+            </li>
+            <li>
+                <strong>Trademarks</strong>
+                All trademarks, logos and brand names are the property of their respective owners. All company, product and service
+                names used in this website are for identification purposes only. Use of these names, trademarks and brands does not
+                imply endorsement.
+            </li>
+        </ul>
     </main>
 {{ end }}
