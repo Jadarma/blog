@@ -2,7 +2,7 @@
 title: 'Be Cool About Type Safety'
 description: "Avoid common mistakes and gotchas in programming by leveraging the power of the type system, and use 
 the same features to simplify domain modelling and make coding a pleasure."
-date: 2024-03-18
+date: 2024-03-20
 category: 'programming'
 tags: [ 'kotlin', 'javascript' ]
 ---
