@@ -14,6 +14,7 @@
     <link rel="stylesheet" href = "{{ (resources.Get "css/chromastyles.css" | minify | fingerprint).Permalink }}">
     <link rel="stylesheet" href = "{{ (resources.Get "css/style.css"   | minify | fingerprint).Permalink }}">
     <link rel="icon" href="{{ .Site.BaseURL }}img/jadarma_avatar.png">
+    {{ with .OutputFormats.Get "rss" -}}{{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}{{ end }}
     <title>{{ block "title" . }}{{ with .Title}}{{.}} | {{ end }}{{ .Site.Title }}{{ end }}</title>
 </head>
 <body>

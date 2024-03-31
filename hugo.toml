@@ -1,6 +1,7 @@
 baseURL = 'https://jadarma.github.io/blog'
 languageCode = 'en-us'
 title = "Jadarma's Blog"
+copyright = "© 2024 Dan Cîmpianu"
 
 # No need for a dedicated page for each taxonomy, they are inlined in the filters.
 disableKinds = [ 'taxonomy' ]
@@ -21,6 +22,13 @@ paginate = 10
 category = 'category'
 tag = 'tags'
 series = 'series'
+
+# Enable RSS for the main index only.
+[outputs]
+home = ['html', 'rss']
+section = ['html']
+taxonomy = ['html']
+term = ['html']
 
 [markup.highlight]
 codeFences = true
