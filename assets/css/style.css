@@ -334,6 +334,14 @@ article.single div.taxonomy {
 article.single div.taxonomy a {
     text-decoration: none;
 }
+
+article.single figure > figcaption {
+    text-align: center;
+}
+article.single figure > img {
+    display: block;
+    margin: 0 auto;
+}
 /* CONTENT & ELEMENTS -----------------------------------------------------------------------------------------------*/
 #page-title {
     align-self: center;
