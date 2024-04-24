@@ -1,0 +1,44 @@
+{{- /*
+  Video Shortcode.
+  Embed an HTML video tag. Arguments are the same as HTML attributes. Files should be placed in the same page bundle.
+  Example:
+  {{< video src="file_name_without_extension" autoplay="true" loop="true" controls="false">}}
+*/ -}}
+
+{{- $source := .Get "src" -}}
+
+{{- $width    := or (.Get "width") "100%"   -}}
+{{- $height   := or (.Get "height") "640px" -}}
+
+{{- $autoplay := cond (eq (or (.Get "autoplay") "false") "true") true false -}}
+{{- $controls := cond (eq (or (.Get "controls") "true" ) "true") true false -}}
+{{- $loop     := cond (eq (or (.Get "loop"    ) "false") "true") true false -}}
+{{- $muted    := cond (eq (or (.Get "muted"   ) "false") "true") true false -}}
+
+{{- $found := false -}}
+
+<video preload="auto" playsinline width="{{ $width }}" height="{{ $height }}"
+       {{- if $controls }} controls {{- end -}}
+       {{- if $autoplay }} autoplay {{- end -}}
+       {{- if or $muted $autoplay }} muted {{- end -}}
+       {{- if $loop }} loop {{- end -}}
+       {{- with (.Page.Resources.ByType "image").GetMatch (printf "%s.*" $source) }} poster="{{ .RelPermalink }}" {{- end -}}
+>
+    {{- with .Page.Resources.GetMatch (printf "%s.webm" $source) -}}
+        <source src="{{ .RelPermalink }}" type="video/webm">
+        {{- $found = true -}}
+    {{- end -}}
+    {{- with (.Page.Resources.GetMatch (printf "%s.mp4" $source)) -}}
+        <source src="{{ .RelPermalink }}" type="video/mp4">
+        {{- $found = true -}}
+    {{- end -}}
+    {{- with (.Page.Resources.GetMatch (printf "%s.ogg" $source)) -}}
+        <source src="{{ .RelPermalink }}" type="video/ogg">
+        {{- $found = true -}}
+    {{- end -}}
+    <strong>Your browser does not support the video tag.</strong>
+</video>
+
+{{- if not $found -}}
+    {{- errorf "No valid videofile(s) with name %q found. Expect at least one of: .webm, .mp4, .ogg extensions." $source -}}
+{{- end -}}
