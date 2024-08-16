@@ -10,7 +10,7 @@ I recently got [Beltmatic](https://store.steampowered.com/app/2674590/Beltmatic/
 game.
 This is how I played through it.
 
-<!-- more -->
+<!--more-->
 
 I got it on the Steam Summer Sale, in order to scratch the insatiable itch caused by the wait for Satisfactory 1.0.
 And no, I don't want to try Factorio.
