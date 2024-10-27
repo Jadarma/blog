@@ -3,6 +3,7 @@
 
 # Hugo.
 public
+resources
 .hugo_build.lock
 
 # Devenv

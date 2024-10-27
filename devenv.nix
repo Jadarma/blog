@@ -1,7 +1,7 @@
 { pkgs, lib, config, inputs, ... }:
 
 {
-  packages = [ pkgs.hugo ];
+  packages = with pkgs; [ hugo dart-sass ];
 
   processes.serve.exec = "serve";
 

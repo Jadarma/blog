@@ -4,18 +4,17 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
-    {{ with .Description }}<meta name="description" content="{{.}}">{{- end -}}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/picocss/2.0.6/pico.cyan.min.css" integrity="sha512-kICeKy6iub2fPDFRn0v+IGpnb13yWl7e6umN7pGJUyZ9mTzoDAX9eHLVRsgIufQaF0y12S/u46GusOvwEFaykg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/solid.min.css" integrity="sha512-pZlKGs7nEqF4zoG0egeK167l6yovsuL8ap30d07kA5AJUq+WysFlQ02DLXAmN3n0+H3JVz5ni8SJZnrOaYXWBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/brands.min.css" integrity="sha512-8RxmFOVaKQe/xtg6lbscU9DU0IRhURWEuiI0tXevv+lXbAHfkpamD4VKFQRto9WgfOJDwOZ74c/s9Yesv3VvIQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/fontawesome.min.css" integrity="sha512-d0olNN35C6VLiulAobxYHZiXJmq+vl+BGIgAxQtD5+kqudro/xNMvv2yIHAciGHpExsIbKX3iLg+0B6d0k4+ZA==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href = "{{ (resources.Get "css/fonts.css" | minify | fingerprint).Permalink }}">
-    <link rel="stylesheet" href = "{{ (resources.Get "css/colors.css" | minify | fingerprint).Permalink }}">
-    <link rel="stylesheet" href = "{{ (resources.Get "css/chromastyles.css" | minify | fingerprint).Permalink }}">
-    <link rel="stylesheet" href = "{{ (resources.Get "css/style.css"   | minify | fingerprint).Permalink }}">
-    <link rel="icon" href="{{ .Site.BaseURL }}img/jadarma_avatar.png">
-    {{ with .OutputFormats.Get "rss" -}}{{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}{{ end }}
+    <meta name="description" content="{{.Description}}">
     <title>{{ block "title" . }}{{ with .Title}}{{.}} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+    <link rel="icon" href="{{ .Site.BaseURL }}img/jadarma_avatar.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/picocss/2.0.6/pico.cyan.min.css" integrity="sha512-kICeKy6iub2fPDFRn0v+IGpnb13yWl7e6umN7pGJUyZ9mTzoDAX9eHLVRsgIufQaF0y12S/u46GusOvwEFaykg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/solid.min.css" integrity="sha512-/r+0SvLvMMSIf41xiuy19aNkXxI+3zb/BN8K9lnDDWI09VM0dwgTMzK7Qi5vv5macJ3VH4XZXr60ip7v13QnmQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/brands.min.css" integrity="sha512-EJp8vMVhYl7tBFE2rgNGb//drnr1+6XKMvTyamMS34YwOEFohhWkGq13tPWnK0FbjSS6D8YoA3n3bZmb3KiUYA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/fontawesome.min.css" integrity="sha512-B46MVOJpI6RBsdcU307elYeStF2JKT87SsHZfRSkjVi4/iZ3912zXi45X5/CBr/GbCyLx6M1GQtTKYRd52Jxgw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {{ with resources.Get "css/main.scss" | toCSS (dict "transpiler" "dartsass" "targetPath" "css/style.css") | minify | fingerprint "sha512" }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous" referrerpolicy="no-referrer">
+    {{ end }}
+    {{ with .OutputFormats.Get "rss" -}}{{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}{{ end }}
 </head>
 <body>
 {{ partial "header.html" . }}
