@@ -42,11 +42,18 @@ The movie was still playing while I had a laughing fit, trying to navigate back 
 sea of new tabs.
 Of course, that didn't go well, so it was time to close the browser.
 When I opened it again, we were again greeted with five thousand tabs, because it's set to reopen the last session.
-
 Thankfully, Firefox endured it, and holding down _Ctrl+W_ was enough to clean up the mess in 30 seconds.
 The movie was resumed, and all was well.
+
+For those who want the frog dissected, I was able to reproduce this issue by having a glance at Vimium's documentation[^3].
+The butt-dial in question must've been: **`5467t`**, which indeed tells Vimium to open that many tabs, and it also fits
+the steps to reproduce, since all the keys involved are conveniently neighboring each-other, perfect for an accident.
+Why does the documented _"Open new tab"_ command show up as _"undefined"_ in the pop-up?
+Only JavaScript knows.
+
 But I will always remember that even when I least expect it, JavaScript will still find a way to haunt me.
 And of all the ways JavaScript makes me cry, I'm glad laughter is also a viable option.
 
 [^1]: [With Honors (1994)](https://www.themoviedb.org/movie/16297-with-honors) — I recommend it.
 [^2]: [This Rii-Mini Thing](https://www.amazon.de/-/en/Rii-Mini-Wireless-Keyboard-Touchpad-black/dp/B07CCFSYFX) — _(Meh, does the job, not an endorsement!)_
+[^3]: [Vimium](https://vimium.github.io/)
