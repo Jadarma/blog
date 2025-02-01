@@ -61,11 +61,11 @@ _(which nonetheless is a worryingly large proportion of your JIRA backlog LOL)_.
 
 And hey, let's be fair, that's what they want to automate with AI, the boring stuff, so we can do the cool stuff.
 Right?
-Although it's not as honest to draw the conclusion that AI improves your code et-all, without mentioning these
+Although it's not as honest to draw the conclusion that AI improves your code in general, without mentioning these
 improvements were observed in the place we'd most expect.
 
-An API is a pretty complex thing when you consider all the different components you need to wire together and all!
-Yes, it is _extremely_ complicated when you actually do complex stuff, not the case here, later in the methodology
+An API is a pretty complex thing when you consider all the different components you need to wire together!
+Yes, it is _extremely_ complicated when you actually do complex stuff; not the case here, later in the methodology
 section they elaborate:
 
 > Each group completed a coding exercise for a web server of fictional restaurant reviews.
@@ -152,15 +152,15 @@ per code error:
   alt="Control-ers get 16 LoC, while Copilot-ers get 18.2"
 >}}
 
-This is exactly the misleading percentage I talked about, it was first presented as
-**13% more lines of code on average without errors**.
+This is exactly the misleading percentage I talked about.
+It was first presented as **13% more lines of code on average without errors**.
 _Wowza!!1_
 Then you look at the actual numbers, and it's a measly two more lines.
 
 "But Dan", I hear you say, "don't be so critical, I mean after all those errors add up in time! You've got to be a
 little more open-minded and think about the big picture!"
 
-You are right when you say "Well, bugs are best be avoided", but I don't dare be as open-minded as GitHub, from fear of
+You are right when you say "Well, bugs are best to be avoided", but I don't dare be as open-minded as GitHub, from fear of
 rendering dictionaries useless.
 If you keep reading, further in the article they hit you with this gem:
 
@@ -193,7 +193,7 @@ better code, as shown here:
 >}}
 
 Code style and code reviews are a highly subjective area, and entire flame wars have been waged over `eslint` rules,
-indentation styles, curly placements, and other "pedanterisms".
+indentation styles, curly placements, and other pedantry.
 So we must all agree that human intuition is the only metric we can have for the categories being tested.
 OK, fair.
 Except... we don't know _how_ they did it.
@@ -215,7 +215,7 @@ each-other.
 I would have preferred to have a third, impartial group grade these, but I guess they couldn't afford a bigger sample.
 
 At the very least, I can appreciate they only made the developers who passed all unit tests do the reviewing.
-But remember, dear reader, that you're baited with a 3% increase in preference from some random 25 developers, who's
+But remember, dear reader, that you're baited with a 3% increase in preference from some random 25 developers, whose
 only credentials _(at least mentioned by the study)_ is holding a job for 5 years and passing 10 unit tests.
 
 ## LGTM, Ship It! 🚀
