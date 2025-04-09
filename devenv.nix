@@ -1,6 +1,4 @@
-{ pkgs, lib, config, inputs, ... }:
-
-{
+{ pkgs, lib, config, inputs, ... }: {
   packages = with pkgs; [ hugo dart-sass imagemagick ];
 
   processes.serve.exec = "serve";

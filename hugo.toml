@@ -7,7 +7,8 @@ copyright = "© 2024 Dan Cîmpianu"
 disableKinds = [ 'taxonomy' ]
 
 # Set the number of posts per filter page.
-paginate = 10
+[pagination]
+pagerSize = 10
 
 # Adjust URL structure.
 [permalinks]
