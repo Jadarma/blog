@@ -9,9 +9,9 @@ tags: [ 'software', 'linux' ]
 
 What started as a nerdy interest turned into a hobby now seems like a necessity.
 I firmly believe that everyone interested and capable, or willing to learn, should set up a home lab.
-Here's why..
+Here's why…
 
-<!-- more -->
+<!--more-->
 
 # What is a Home Lab?
 
