@@ -13,11 +13,9 @@ The go-to recipe for when a group of friends meets at someone's house and want a
 
 # Straight To The Point
 
-Ingredients:
-
 **🩸 Sauce**
 - Mayo _(2 part)_
-- Ketchup _(1part)_
+- Ketchup _(1 part)_
 - Mustard _(1/2 part)_
 - Finely chopped onion _(to taste)_
 - Finely chopped pickles _(to taste)_
@@ -50,11 +48,9 @@ Ingredients:
 - Patty
 - Cheese _(cheddar, melted on patty)_
 - Bacon _(crumpled)_
-- Onion
+- Onion _(grilled)_
 - Jalapeño _(4 slices)_
 - Top bun _(sauced)_
-
-Enjoy! 🍔
 
 # The Image Guide
 
@@ -67,13 +63,13 @@ Add finely diced onion and pickles, to give a little texture.
 Season with Worcester sauce, two sticks of brown sugar, and some garlic powder.
 Mix well.
 
-For the meat spices, mix together in approximately equal proportions all the powders: smoked paprika, chilli powder,
+For the meat spices, mix together all the powders in approximately equal proportions: smoked paprika, chilli powder,
 onion powder, garlic powder, salt, and pepper.
 
 Get the widest onions you can find and cut them in rings; try to keep their _"circular integrity"_.
 Cut the tomatoes similarly, and thinly slice the pickles and jalapeños.
 Get the cheese slices handy.
-I used cheddar, but any melt-y cheese will do.
+I used cheddar, but any melting cheese will do.
 
 {{< figure src="burger0.webp"
 alt="Prepared ingredients."
@@ -99,7 +95,9 @@ alt="Arranged buns, seasoned patty, and onion slice on the grill."
 
 When the buns are toasted, wait for the meat to cook halfway, then turn over, season it again.
 Turn the onion as well and continue cooking.
+
 About _30s - 1m_ before it is done, add one or two slices of cheese on top of the patty and cover with a lid to melt.
+The cheese will trap the seasoning _(and therefore, flavor)_ inside.
 This is a good time to start building the burger.
 
 {{< figure src="burger3.webp"
@@ -136,4 +134,6 @@ alt="Adding the onion and top bun, completing the burger assembly."
 >}}
 
 I cook them one by one, to be eaten immediately.
-Eight burgers is a convenient batch size for using up the ingredients as they are portioned off-the-shelf.
+Six to eight burgers is a convenient batch size for using up the ingredients as they are portioned off-the-shelf.
+
+Enjoy! 🍔
