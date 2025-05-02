@@ -340,7 +340,7 @@ article.single figure > figcaption {
 }
 article.single figure > img {
     display: block;
-    margin: 0 auto;
+    margin: 1em auto;
     height: 100%;
 }
 
