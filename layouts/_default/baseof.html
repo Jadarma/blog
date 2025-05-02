@@ -5,8 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light dark">
     <meta name="darkreader-lock">
-    <meta name="description" content="{{.Description}}">
-    <title>{{ block "title" . }}{{ with .Title}}{{.}} | {{ end }}{{ .Site.Title }}{{ end }}</title>
+    <meta name="url" property="og:url" content="{{ .Permalink }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}" >
+    <meta property="og:locale" content="en_US" >
+    <meta name="title" property="og:title" content="{{ if .Title }}{{ .Title }} | {{end}} {{ .Site.Title }}">
+    <title>{{ if .Title }}{{ .Title }} | {{end}} {{ .Site.Title }}</title>
+    {{ if .Params.Title }}
+    <meta name="type" property="og:type" content="article" >
+    <meta property="article:author" content="Dan Cîmpianu" >
+    <meta property="article:section" content="{{ .Params.category }}" >
+    <meta property="article:published_time" content="{{ .Params.date.Format "2006-01-02" }}" >
+    <meta name="description" property="og:description" content="{{.Description}}">
+    {{ if .Params.thumbnail }} <meta property="og:image" content="{{ .Permalink }}{{ .Params.thumbnail }}" /> {{ end }}
+    {{ end }}
     <link rel="icon" href="{{ .Site.BaseURL }}img/jadarma_avatar.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/picocss/2.0.6/pico.cyan.min.css" integrity="sha512-kICeKy6iub2fPDFRn0v+IGpnb13yWl7e6umN7pGJUyZ9mTzoDAX9eHLVRsgIufQaF0y12S/u46GusOvwEFaykg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/solid.min.css" integrity="sha512-/r+0SvLvMMSIf41xiuy19aNkXxI+3zb/BN8K9lnDDWI09VM0dwgTMzK7Qi5vv5macJ3VH4XZXr60ip7v13QnmQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />

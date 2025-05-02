@@ -2,6 +2,7 @@
 title: 'Optimizing the Fun Away'
 description: "Automating number generation in the maths factory game Beltmatic using templates and MAMs."
 date: 2024-07-01
+thumbnail: mam_preview_small.webp
 category: 'gaming'
 tags: [ ]
 ---

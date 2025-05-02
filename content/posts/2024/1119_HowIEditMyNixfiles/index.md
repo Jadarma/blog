@@ -2,6 +2,7 @@
 title: 'The Unnecessarily Complicated (But Delightfully Convenient) Way I Edit My Nixfiles'
 description: 'Showcasing some helper scripts for a decent and isolated development experience when working on your NixOS configuration flakes.'
 date: 2024-11-19
+thumbnail: editor.webp
 category: 'technology'
 tags: [ 'nix', 'linux' ]
 ---

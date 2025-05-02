@@ -2,6 +2,7 @@
 title: "The Best Prank JavaScript Ever Pulled On Me"
 description: "An astronomically improbable thing happened at an unbelievably comical time."
 date: 2025-01-31
+thumbnail: popup.webp
 category: 'technology'
 tags: [ 'javascript', 'humor', 'software' ]
 ---

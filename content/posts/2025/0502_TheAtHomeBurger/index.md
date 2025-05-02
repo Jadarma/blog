@@ -2,6 +2,7 @@
 title: "The 'At Home' Burger"
 description: "The go-to recipe for when a group of friends meets at someone's house and want a delicious, classic burger."
 date: 2025-05-02
+thumbnail: burger7.webp
 category: 'cooking'
 tags: [ 'tutorial' ]
 ---
