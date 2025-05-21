@@ -63,3 +63,21 @@
     --color-purple: var(--base0E);
     --color-error: var(--base0F);
 }
+
+/* Variables to use in other SCSS files. */
+$bg: var(--color-bg);
+$bg-lighter: var(--color-bg-lighter);
+$bg-selection: var(--color-bg-selection);
+$fg-muted: var(--color-fg-muted);
+$fg-dark: var(--color-fg-dark);
+$fg: var(--color-fg);
+$fg-light: var(--color-fg-light);
+$bg-light: var(--color-bg-light);
+$red: var(--color-red);
+$orange: var(--color-orange);
+$yellow: var(--color-yellow);
+$green: var(--color-green);
+$cyan: var(--color-cyan);
+$blue: var(--color-blue);
+$purple: var(--color-purple);
+$error: var(--color-error);

@@ -1,0 +1,102 @@
+@use "colors" as color;
+
+/* CUSTOM CHROMA THEME ----------------------------------------------------------------------------------------------*/
+/* Done manually, because I need me my IDE consistency.                                                              */
+/* Designed to be paired with the Base16 Theme defined in `colors.scss`.                                              */
+/* ------------------------------------------------------------------------------------------------------------------*/
+
+/* Make Pico code blocks consistent with theme. */
+:root {
+  --pico-code-color: color.$fg !important;
+  --pico-code-backgroud-color: color.$bg !important;
+}
+
+.chroma {
+  /* @formatter:off */
+  /* PreWrapper               */  color: color.$fg; background-color: color.$bg;
+  /* Other                    */ .x  { }
+  /* Error                    */ .err { color: color.$bg; background-color: color.$error; font-weight: bold; }
+  /* CodeLine                 */ .cl { }
+  /* LineLink                 */ .lnlinks { outline: none; text-decoration: none; color: inherit; }
+  /* LineTableTD              */ .lntd { vertical-align: top; padding: 0; margin: 0; border: 0; }
+  /* LineTable                */ .lntable { border-spacing: 0; padding: 0; margin: 0; border: 0; }
+  /* LineHighlight            */ .hl { color: color.$fg-light; background-color: color.$bg-selection; }
+  /* LineNumbersTable         */ .lnt { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em; color: color.$fg-muted; }
+  /* LineNumbers              */ .ln { white-space: pre; -webkit-user-select: none; user-select: none; margin-right: 0.4em; padding: 0 0.4em 0 0.4em; color: color.$fg-muted; }
+  /* Line                     */ .line { display: flex; }
+  /* Keyword                  */ .k  { color: color.$purple; font-style: italic; }
+  /* KeywordConstant          */ .kc { color: color.$purple; font-style: italic; font-weight: bold; }
+  /* KeywordDeclaration       */ .kd { color: color.$purple; font-style: italic; }
+  /* KeywordNamespace         */ .kn { color: color.$purple; font-style: italic; }
+  /* KeywordPseudo            */ .kp { color: color.$purple; font-style: italic; font-weight: bold; }
+  /* KeywordReserved          */ .kr { color: color.$purple; font-style: italic; }
+  /* KeywordType              */ .kt { color: color.$purple; font-style: italic; }
+  /* Name                     */ .n  { }
+  /* NameAttribute            */ .na { color: color.$yellow; }
+  /* NameBuiltin              */ .nb { }
+  /* NameBuiltinPseudo        */ .bp { }
+  /* NameClass                */ .nc { color: color.$yellow; }
+  /* NameConstant             */ .no { color: color.$blue; font-weight: bold; }
+  /* NameDecorator            */ .nd { color: color.$purple; }
+  /* NameEntity               */ .ni { color: color.$yellow; }
+  /* NameException            */ .ne { color: color.$yellow; }
+  /* NameFunction             */ .nf { color: color.$blue; }
+  /* NameFunctionMagic        */ .fm { color: color.$blue; }
+  /* NameLabel                */ .nl { color: color.$blue; font-weight: bold; }
+  /* NameNamespace            */ .nn { }
+  /* NameOther                */ .nx { }
+  /* NameProperty             */ .py { color: color.$fg-light; font-weight: bold; }
+  /* NameTag                  */ .nt { color: color.$red; }
+  /* NameVariable             */ .nv { color: color.$orange; }
+  /* NameVariableClass        */ .vc { color: color.$orange; }
+  /* NameVariableGlobal       */ .vg { color: color.$orange; }
+  /* NameVariableInstance     */ .vi { color: color.$orange; }
+  /* NameVariableMagic        */ .vm { color: color.$orange; }
+  /* Literal                  */ .l  { color: color.$orange; }
+  /* LiteralDate              */ .ld { color: color.$orange; }
+  /* LiteralString            */ .s  { color: color.$green; }
+  /* LiteralStringAffix       */ .sa { color: color.$green; }
+  /* LiteralStringBacktick    */ .sb { color: color.$green; }
+  /* LiteralStringChar        */ .sc { color: color.$green; }
+  /* LiteralStringDelimiter   */ .dl { color: color.$green; }
+  /* LiteralStringDoc         */ .sd { color: color.$green; }
+  /* LiteralStringDouble      */ .s2 { color: color.$green; }
+  /* LiteralStringEscape      */ .se { color: color.$cyan; }
+  /* LiteralStringHeredoc     */ .sh { color: color.$green; }
+  /* LiteralStringInterpol    */ .si { color: color.$cyan; }
+  /* LiteralStringOther       */ .sx { color: color.$cyan; }
+  /* LiteralStringRegex       */ .sr { color: color.$cyan; }
+  /* LiteralStringSingle      */ .s1 { color: color.$green; }
+  /* LiteralStringSymbol      */ .ss { color: color.$cyan; }
+  /* LiteralNumber            */ .m  { color: color.$orange; }
+  /* LiteralNumberBin         */ .mb { color: color.$orange; }
+  /* LiteralNumberFloat       */ .mf { color: color.$orange; }
+  /* LiteralNumberHex         */ .mh { color: color.$orange; }
+  /* LiteralNumberInteger     */ .mi { color: color.$orange; }
+  /* LiteralNumberIntegerLong */ .il { color: color.$orange; }
+  /* LiteralNumberOct         */ .mo { color: color.$orange; }
+  /* Operator                 */ .o  { color: color.$cyan; font-weight: bold; }
+  /* OperatorWord             */ .ow { color: color.$cyan; font-weight: bold; }
+  /* Punctuation              */ .p  { color: color.$cyan; }
+  /* Comment                  */ .c  { color: color.$fg-muted; font-style: italic; }
+  /* CommentHashbang          */ .ch { color: color.$fg-muted; font-style: italic; }
+  /* CommentMultiline         */ .cm { color: color.$fg-muted; font-style: italic; }
+  /* CommentSingle            */ .c1 { color: color.$fg-muted; font-style: italic; }
+  /* CommentSpecial           */ .cs { color: color.$fg-muted; font-style: italic; font-weight: bold; }
+  /* CommentPreproc           */ .cp { color: color.$purple; font-weight: bold; }
+  /* CommentPreprocFile       */ .cpf { font-weight: bold; }
+  /* Generic                  */ .g  { }
+  /* GenericDeleted           */ .gd { color: color.$red; background-color: color.$bg-selection; }
+  /* GenericEmph              */ .ge { font-style: italic; }
+  /* GenericError             */ .gr { color: color.$error; }
+  /* GenericHeading           */ .gh { color: color.$blue; font-weight: bold; }
+  /* GenericInserted          */ .gi { color: color.$green; background-color: color.$bg-selection; }
+  /* GenericOutput            */ .go { color: color.$fg-dark; }
+  /* GenericPrompt            */ .gp { color: color.$fg-dark; }
+  /* GenericStrong            */ .gs { font-weight: bold; }
+  /* GenericSubheading        */ .gu { color: color.$blue; }
+  /* GenericTraceback         */ .gt { color: color.$error; }
+  /* GenericUnderline         */ .gl { text-decoration: underline; }
+  /* TextWhitespace           */ .w  { }
+  /* @formatter:on */
+}
