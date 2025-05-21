@@ -1,0 +1,69 @@
+@use "sass:map";
+
+$min-width: 320px;
+$padding: 16px;
+
+$breakpoints-min: (
+  "xs": 0px,
+  "s": 578px,
+  "m": 768px,
+  "l": 1024px,
+  "xl": 1280px,
+  "xxl": 1536px,
+);
+
+$breakpoints-max: (
+  "xs": 577px,
+  "s": 767px,
+  "m": 1023px,
+  "l": 1279px,
+  "xl": 1535px,
+  "xxl": 9999px,
+);
+
+/* Validates the $size is a valid responsive breakpoint. */
+@mixin _check-size($size) {
+  @if map.has-key($breakpoints-min, $size) {
+    @content
+  } @else {
+    @error "Size was #{$size}, but must be one of: xs, s, m, l, xl, xxl"
+  }
+}
+
+/* Applies the content if the size is fitting exactly. */
+@mixin for-size($size) {
+  @include _check-size($size) {
+    @media only screen and (min-width: map.get($breakpoints-min, $size)) and (max-width: map.get($breakpoints-max, $size)) {
+      @content
+    }
+  }
+}
+
+/* Applies the content if the size is at least this. */
+@mixin for-min-size($size) {
+  @include _check-size($size) {
+    @media only screen and (min-width: map.get($breakpoints-min, $size)) {
+      @content
+    }
+  }
+}
+
+/* Applies the content if the size is at most this. */
+@mixin for-max-size($size) {
+  @include _check-size($size) {
+    @media only screen and (max-width: map.get($breakpoints-max, $size)) {
+      @content
+    }
+  }
+}
+
+/* Applies the content if the size is between the range. */
+@mixin for-size-range($low, $high) {
+  @include _check-size($low) {
+    @include _check-size($high) {
+      @media only screen and (min-width: map.get($breakpoints-min, $low)) and (max-width: map.get($breakpoints-max, $high)) {
+        @content
+      }
+    }
+  }
+}

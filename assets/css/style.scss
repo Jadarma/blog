@@ -1,0 +1,218 @@
+@use 'colors' as color;
+@use 'layout' as *;
+
+//<editor-fold desc="Errors">
+div.error404 {
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+
+  > h1 {
+    font-size: 10rem;
+    color: color.$red;
+  }
+}
+
+//</editor-fold>
+
+//<editor-fold desc="Partials">
+article.preview {
+
+  a {
+    text-decoration: none;
+  }
+
+  span.detail {
+    font-size: 0.75rem;
+    color: var(--pico-muted-color);
+
+    > i {
+      margin: 0 0.25rem;
+    }
+  }
+}
+
+//</editor-fold>
+
+//<editor-fold desc="Pagination">
+div.pagination {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  > a {
+    border-radius: 4pt;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  > span.page-count {
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+//</editor-fold>
+
+//<editor-fold desc="Posts Page">
+h2.posts-year {
+  margin-bottom: 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--pico-muted-border-color);
+}
+
+article.minimal {
+  background-color: transparent;
+  box-shadow: none;
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  align-items: center;
+
+  > a {
+    &.post-link {
+      flex-grow: 1;
+    }
+
+    &:not(:hover) {
+      text-decoration: none;
+    }
+  }
+
+  @include for-max-size("s") {
+    flex-direction: column;
+    align-items: revert;
+  }
+}
+
+//</editor-fold>
+
+//<editor-fold desc="Filter Page">
+#filter {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+
+  @include for-max-size("m") {
+    flex-direction: column;
+  }
+
+  @include for-min-size("l") {
+    > #results {
+      flex-grow: 1;
+    }
+    > #taxonomies {
+      width: 420px;
+      min-width: 420px;
+    }
+  }
+}
+
+ul.taxonomy-list {
+
+  &.taxonomy-tags {
+    list-style: none inside none;
+    padding-left: 0;
+
+    > li {
+      display: inline-block;
+      padding: 4pt 8pt;
+      border-radius: 4pt;
+
+      &:hover {
+        outline: 1pt solid var(--pico-primary);
+      }
+    }
+  }
+
+  > li > a {
+    text-decoration: none;
+  }
+}
+
+//</editor-fold>
+
+//<editor-fold desc="Articles">
+article.single {
+  padding-top: 5rem;
+
+  span.detail {
+    font-size: 0.75rem;
+    color: var(--pico-muted-color);
+
+    > i {
+      margin: 0 0.25rem;
+    }
+  }
+
+  div.meta {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  div.taxonomy {
+    font-size: 0.75rem;
+    color: var(--pico-muted-color);
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  figure {
+
+    > figcaption {
+      text-align: center;
+    }
+
+    > img {
+      display: block;
+      margin: 1em auto;
+      object-fit: scale-down;
+    }
+
+    &.medium {
+      > img {
+        height: 640px;
+        max-height: 640px;
+      }
+    }
+  }
+}
+
+//</editor-fold>
+
+//<editor-fold desc="Content & Elements">
+#page-title {
+  align-self: center;
+  text-align: center;
+}
+
+#page-subtitle {
+  align-self: center;
+  font-style: italic;
+}
+
+.hanchor {
+  color: color.$fg-muted;
+  visibility: hidden;
+  text-decoration: none;
+}
+
+*:hover > .hanchor {
+  color: color.$green;
+  visibility: visible;
+}
+
+.card {
+  background: var(--pico-card-background-color);
+  padding: var(--pico-spacing);
+  margin-bottom: var(--pico-spacing);
+  box-shadow: var(--pico-box-shadow);
+}
+
+//</editor-fold>

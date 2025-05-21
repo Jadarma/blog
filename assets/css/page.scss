@@ -1,0 +1,189 @@
+@use 'colors' as color;
+@use 'layout' as *;
+
+//<editor-fold desc="Body">
+// Set minimum viewport size and ensure an empty-ish page covers at least the device viewport. */
+body {
+  min-width: $min-width;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  // Limit the width of some pages for easier reading.
+  @include for-min-size("xl") {
+    &.container.thin {
+      width: 100%;
+      max-width: 48rem;
+      align-self: center;
+    }
+  }
+}
+//</editor-fold>
+
+//<editor-fold desc="Header">
+header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1em;
+
+  // Small and medium screens should stack the title and navigator vertically.
+  @include for-max-size("l") {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  // Disable spacing for horizontal rule right after header.
+  + hr {
+    margin-top: 0;
+  }
+}
+
+// Header title (Icon + Name)
+header > div.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+
+  // Medium+ screens should inline the header.
+  @include for-min-size("m") {
+    flex-direction: row;
+    gap: 1em;
+  }
+
+  > a {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  > img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
+}
+
+// Navigation tabs / buttons.
+header > nav {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  font-weight: bold;
+  align-items: center;
+
+  > a {
+    flex-grow: 1;
+    border-radius: 4pt;
+    padding: 4px 16px;
+    text-align: center;
+    text-decoration: none;
+    height: fit-content;
+
+    // Navigation items will respond to mouse overs.
+    &:hover i {
+      animation: fa-beat 0.5s normal linear;
+    }
+
+    // Pretty pretty colors! But a lot of boilerplate...
+    /* @formatter:off */
+    &:nth-child(1)       { color: color.$red;                        background-color: var(--pico-card-background-color); }
+    &:nth-child(1):hover { color: var(--pico-card-background-color); background-color: color.$red; }
+    &:nth-child(2)       { color: color.$green;                      background-color: var(--pico-card-background-color); }
+    &:nth-child(2):hover { color: var(--pico-card-background-color); background-color: color.$green; }
+    &:nth-child(3)       { color: color.$yellow;                     background-color: var(--pico-card-background-color); }
+    &:nth-child(3):hover { color: var(--pico-card-background-color); background-color: color.$yellow; }
+    &:nth-child(4)       { color: color.$blue;                       background-color: var(--pico-card-background-color); }
+    &:nth-child(4):hover { color: var(--pico-card-background-color); background-color: color.$blue; }
+    &:nth-child(5)       { color: color.$purple;                     background-color: var(--pico-card-background-color); }
+    &:nth-child(5):hover { color: var(--pico-card-background-color); background-color: color.$purple; }
+    @media screen and (prefers-color-scheme: light) { box-shadow: 28px var(--pico-box-shadow); }
+    /* @formatter:on */
+  }
+
+  // Small screens should hide the label.
+  @include for-max-size("s") {
+    width:  calc($min-width - 2 * $padding);
+
+    a > span {
+      display: none;
+    }
+  }
+
+  // Medium sized screens should cover the whole length evenly with the nav bar.
+  @include for-size-range("m", "l") {
+    width: 100%;
+    > a {
+      width: calc((100% - 4em) / 5);
+    }
+  }
+}
+//</editor-fold>
+
+//<editor-fold desc="Footer">
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+
+  // Customize copyright text.
+  > div.copyright {
+    line-height: 1.1em;
+  }
+
+  // Customize social links.
+  > div.socials {
+    align-content: flex-start;
+    margin: auto 0;
+    font-size: 1.5rem;
+    user-select: none;
+
+    a {
+      text-decoration: none;
+
+      // Make icons bounce while hovered. Pick me!
+      > i:hover {
+        animation: fa-bounce 1s infinite linear;
+      }
+
+      // Custom colors for social icons.
+      .fa-github, .fa-steam {
+        color: color.$fg;
+      }
+
+      .fa-signal-messenger, .fa-discord {
+        color: color.$blue;
+      }
+
+      .fa-reddit {
+        color: color.$orange;
+      }
+    }
+  }
+
+  // Change to a vertical layout for small screens.
+  @include for-max-size("xs") {
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 1em;
+
+    > div.copyright {
+      text-align: center;
+    }
+  }
+}
+
+// Disable spacing for horizontal rule right before footer.
+hr:has(+footer) {
+  margin-bottom: 0;
+}
+//</editor-fold>

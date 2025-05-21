@@ -3,81 +3,61 @@
 /* Based on (and slightly modified) palette from https://github.com/ntpeters/base16-materialtheme-scheme.            */
 /* ------------------------------------------------------------------------------------------------------------------*/
 @media (prefers-color-scheme: dark) {
-    :root {
-        --base00: #263238;
-        --base01: #2E3C43;
-        --base02: #314549;
-        --base03: #546E7A;
-        --base04: #B2CCD6;
-        --base05: #EEFFFF;
-        --base06: #EEFFFF;
-        --base07: #FFFFFF;
-        --base08: #F07178;
-        --base09: #F78C6C;
-        --base0A: #FFCB6B;
-        --base0B: #C3E88D;
-        --base0C: #89DDFF;
-        --base0D: #82AAFF;
-        --base0E: #C792EA;
-        --base0F: #FF5370;
-    }
+  :root {
+    --base00: #263238;
+    --base01: #2E3C43;
+    --base02: #314549;
+    --base03: #546E7A;
+    --base04: #B2CCD6;
+    --base05: #EEFFFF;
+    --base06: #EEFFFF;
+    --base07: #FFFFFF;
+    --base08: #F07178;
+    --base09: #F78C6C;
+    --base0A: #FFCB6B;
+    --base0B: #C3E88D;
+    --base0C: #89DDFF;
+    --base0D: #82AAFF;
+    --base0E: #C792EA;
+    --base0F: #FF5370;
+  }
 }
 
 @media (prefers-color-scheme: light) {
-    :root {
-        --base00: #FAFAFA;
-        --base01: #E7EAEC;
-        --base02: #CCEAE7;
-        --base03: #9ca4b5;
-        --base04: #8796B0;
-        --base05: #485254;
-        --base06: #727c7e;
-        --base07: #FFFFFF;
-        --base08: #FF5370;
-        --base09: #F76D47;
-        --base0A: #FFB62C;
-        --base0B: #91B859;
-        --base0C: #39ADB5;
-        --base0D: #6182B8;
-        --base0E: #7C4DFF;
-        --base0F: #E53935;
-    }
-}
-
-/* Human readable aliases for Base16 variables. */
-:root {
-    --color-bg: var(--base00);
-    --color-bg-lighter: var(--base01);
-    --color-bg-selection: var(--base02);
-    --color-fg-muted: var(--base03);
-    --color-fg-dark: var(--base04);
-    --color-fg: var(--base05);
-    --color-fg-light: var(--base06);
-    --color-bg-light: var(--base07);
-    --color-red: var(--base08);
-    --color-orange: var(--base09);
-    --color-yellow: var(--base0A);
-    --color-green: var(--base0B);
-    --color-cyan: var(--base0C);
-    --color-blue: var(--base0D);
-    --color-purple: var(--base0E);
-    --color-error: var(--base0F);
+  :root {
+    --base00: #FAFAFA;
+    --base01: #E7EAEC;
+    --base02: #CCEAE7;
+    --base03: #9ca4b5;
+    --base04: #8796B0;
+    --base05: #485254;
+    --base06: #727c7e;
+    --base07: #FFFFFF;
+    --base08: #FF5370;
+    --base09: #F76D47;
+    --base0A: #FFB62C;
+    --base0B: #91B859;
+    --base0C: #39ADB5;
+    --base0D: #6182B8;
+    --base0E: #7C4DFF;
+    --base0F: #E53935;
+  }
 }
 
 /* Variables to use in other SCSS files. */
-$bg: var(--color-bg);
-$bg-lighter: var(--color-bg-lighter);
-$bg-selection: var(--color-bg-selection);
-$fg-muted: var(--color-fg-muted);
-$fg-dark: var(--color-fg-dark);
-$fg: var(--color-fg);
-$fg-light: var(--color-fg-light);
-$bg-light: var(--color-bg-light);
-$red: var(--color-red);
-$orange: var(--color-orange);
-$yellow: var(--color-yellow);
-$green: var(--color-green);
-$cyan: var(--color-cyan);
-$blue: var(--color-blue);
-$purple: var(--color-purple);
-$error: var(--color-error);
+$bg: var(--base00);
+$bg-lighter: var(--base01);
+$bg-selection: var(--base02);
+$fg-muted: var(--base03);
+$fg-dark: var(--base04);
+$fg: var(--base05);
+$fg-light: var(--base06);
+$bg-light: var(--base07);
+$red: var(--base08);
+$orange: var(--base09);
+$yellow: var(--base0A);
+$green: var(--base0B);
+$cyan: var(--base0C);
+$blue: var(--base0D);
+$purple: var(--base0E);
+$error: var(--base0F);
