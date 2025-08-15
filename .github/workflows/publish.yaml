@@ -22,11 +22,11 @@ jobs:
       - name: 'Install devenv.sh'
         run: nix profile install nixpkgs#devenv
       - name: 'Checkout'
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
       - name: 'Build'
         run: devenv shell build
       - name: 'Upload Pages Artifact'
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./public
 
