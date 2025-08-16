@@ -1,6 +1,5 @@
 ---
 title: 'About'
-layout: 'about'
 ---
 
 My name is Dan, and I am from Romania 🇷🇴.
