@@ -66,7 +66,7 @@ And there's also a handful ARM based boards out there, it's just a matter of tim
 
 ### Versatile Through Specializations
 
-You cannot use a MiniPC do to everything, but everything you need to do can be done by a MiniPC.
+You cannot use a MiniPC to do everything, but everything you need to do can be done by a MiniPC.
 By mixing and matching different types of MiniPCs, you can cover all your computing needs!
 
 - **General Compute**:
