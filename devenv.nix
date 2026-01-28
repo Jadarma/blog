@@ -5,7 +5,7 @@
 
   scripts = {
     clean.exec = ''
-      rm -rf "$DEVENV_ROOT/public"
+      rm -r "$DEVENV_ROOT/public"
     '';
     build.exec = ''
       hugo --gc --minify --environment production
