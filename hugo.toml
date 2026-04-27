@@ -3,9 +3,6 @@ languageCode = 'en-us'
 title = "Jadarma's Blog"
 copyright = "© 2026 Dan Cîmpianu"
 
-# No need for a dedicated page for each taxonomy, they are inlined in the filters.
-disableKinds = [ 'taxonomy' ]
-
 # Set the number of posts per filter page.
 [pagination]
 pagerSize = 10
