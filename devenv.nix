@@ -5,7 +5,9 @@
 
   scripts = {
     clean.exec = ''
-      rm -r "$DEVENV_ROOT/public"
+      rm -rf "$DEVENV_ROOT/public"
+      rm -rf "$DEVENV_ROOT/resources"
+      rm  -f .hugo_build.lock
     '';
     build.exec = ''
       hugo --gc --minify --environment production
@@ -16,7 +18,8 @@
         --buildFuture \
         --noHTTPCache \
         --watch \
-        --renderToMemory
+        --renderToMemory \
+        --noBuildLock
     '';
   };
 }

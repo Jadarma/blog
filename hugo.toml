@@ -1,5 +1,5 @@
 baseURL = 'https://jadarma.github.io/blog'
-languageCode = 'en-us'
+locale = 'en-us'
 title = "Jadarma's Blog"
 copyright = "© 2026 Dan Cîmpianu"
 
